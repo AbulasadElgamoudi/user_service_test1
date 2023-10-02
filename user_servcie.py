@@ -4,6 +4,11 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+
+@app.route('/')
+def home():
+    return "user Service is Live!"
+
 @app.route('/user/<id>')
 def user(id):
     users = {
